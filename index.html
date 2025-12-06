@@ -1,65 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZM Sanctuary | Spa & Wellness</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Lato"', 'sans-serif'],
-            },
-            colors: {
-              spa: {
-                base: '#FFFBF9',       /* Warm White / Rose White */
-                sand: '#E8DCCA',       /* Beige / Sand */
-                rose: '#F2E2DF',       /* Pale Pink */
-                terracotta: '#C59D93', /* Darker Rose/Brown for text */
-                text: '#5D4037',       /* Warm Brown Text */
-                accent: '#D4B996',     /* Champagne Gold */
-              }
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 1s ease-out forwards',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
-    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-    "three": "https://aistudiocdn.com/three@^0.181.1",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
-  }
-}
-</script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZM Sanctuary | Spa & Wellness</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4e8e4;
+      color: #54372a;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 { font-size: 40px; color: #c59d7b; }
+    p { font-size: 20px; }
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 22px;
+      background: #c59d7b;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body>
+  <h1>Bienvenidos a ZM Sanctuary</h1>
+  <p>Un espacio para el bienestar, la calma y el cuidado personal.</p>
+  <a href="#">Explorar sitio</a>
+</body>
 </html>
