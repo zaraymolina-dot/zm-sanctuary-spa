@@ -1,400 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZM Sanctuary · Caracas Holistic Spa</title>
-
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --bg: #f9ece4;
-      --bg-soft: #f6e3d8;
-      --accent: #c89a7b;
-      --accent-soft: #f2c9aa;
-      --text-main: #5a3427;
-      --text-soft: #735950;
-      --white: #ffffff;
-      --shadow-soft: 0 28px 80px rgba(106, 76, 63, 0.25);
-      --radius-pill: 999px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #fdf4ee 0%, var(--bg) 45%, #f7e4d8 100%);
-      color: var(--text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 28px 20px 96px;
-    }
-
-    /* NAVBAR */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      margin-bottom: 40px;
-    }
-
-    .nav-left,
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #a67f6b;
-    }
-
-    .nav-center {
-      text-align: center;
-    }
-
-    .brand-main {
-      font-family: "Playfair Display", serif;
-      font-size: 1.8rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: #623626;
-      margin-bottom: 4px;
-    }
-
-    .brand-sub {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #b18873;
-    }
-
-    .nav-button {
-      padding: 10px 30px;
-      border-radius: var(--radius-pill);
-      border: 1px solid #d1a78b;
-      background: rgba(255, 255, 255, 0.5);
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #8b5a42;
-      cursor: pointer;
-      transition: all 0.2s ease-out;
-      backdrop-filter: blur(10px);
-    }
-
-    .nav-button:hover {
-      background: #f3d0b3;
-      border-color: #c28861;
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(166, 111, 80, 0.25);
-    }
-
-    /* HERO CÍRCULO */
-
-    .hero {
-      position: relative;
-      margin-top: 10px;
-      margin-bottom: 80px;
-      overflow: hidden;
-    }
-
-    .hero-orb {
-      position: relative;
-      margin: 0 auto;
-      width: min(840px, 100%);
-      aspect-ratio: 4/3;
-      border-radius: 50% 50% 45% 45%;
-      background: radial-gradient(circle at 30% 10%, #ffffff 0, #fbeee5 38%, #ecd4c7 80%);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 10%;
-    }
-
-    .hero-title-main {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.6rem, 3.5vw + 1.4rem, 3.6rem);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #5a3325;
-      margin-bottom: 10px;
-    }
-
-    .hero-title-soft {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.4rem, 3.3vw + 1.2rem, 3.3rem);
-      font-style: italic;
-      color: #d29c8b;
-      margin-bottom: 24px;
-    }
-
-    .hero-text {
-      max-width: 640px;
-      font-size: 1.02rem;
-      color: #7d6153;
-    }
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 1px solid rgba(210, 156, 139, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #c48d72;
-      background: radial-gradient(circle at top, #fdf7f3 0, #f5dfd0 60%, #f3dac9 100%);
-      box-shadow: 0 10px 30px rgba(142, 96, 74, 0.3);
-      font-size: 1.6rem;
-      cursor: pointer;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(-50%, 0); }
-      50% { transform: translate(-50%, -6px); }
-    }
-
-    /* SECCIÓN ESENCIA */
-
-    .section {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 56px;
-      align-items: center;
-      padding: 40px 40px 0;
-      border-radius: 40px;
-      background: linear-gradient(120deg, #fef5ee 0%, #f6e2d5 45%, #f4ded0 100%);
-      box-shadow: 0 30px 60px rgba(176, 130, 102, 0.25);
-    }
-
-    .section-image-wrapper {
-      border-radius: 32px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(134, 91, 68, 0.35);
-    }
-
-    .section-image-wrapper img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      transform: scale(1.03);
-      transition: transform 0.6s ease-out;
-    }
-
-    .section-image-wrapper:hover img {
-      transform: scale(1.06);
-    }
-
-    .section-tag {
-      font-size: 0.86rem;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      color: #c99676;
-      margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 2.3vw + 1.2rem, 2.6rem);
-      color: #5a3427;
-      margin-bottom: 24px;
-    }
-
-    .section-title span {
-      display: block;
-    }
-
-    .section-title span:last-child {
-      color: #c78f77;
-    }
-
-    .section-text p {
-      margin-bottom: 14px;
-      color: #7b5b4d;
-      font-size: 1rem;
-    }
-
-    .section-text strong {
-      color: #a6694f;
-      font-weight: 600;
-    }
-
-    .section-highlight {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(194, 142, 112, 0.35);
-      font-size: 0.95rem;
-      color: #8b6050;
-    }
-
-    .section-highlight span {
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.8rem;
-      color: #b87452;
-      margin-right: 10px;
-    }
-
-    /* FOOTER MINI */
-
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #a78374;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 960px) {
-      header {
-        flex-direction: column;
-        gap: 18px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZM Sanctuary | Spa & Wellness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Lato"', 'sans-serif'],
+            },
+            colors: {
+              spa: {
+                base: '#FFFBF9',       /* Warm White / Rose White */
+                sand: '#E8DCCA',       /* Beige / Sand */
+                rose: '#F2E2DF',       /* Pale Pink */
+                terracotta: '#C59D93', /* Darker Rose/Brown for text */
+                text: '#5D4037',       /* Warm Brown Text */
+                accent: '#D4B996',     /* Champagne Gold */
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
       }
-
-      .nav-left, .nav-right {
-        gap: 18px;
-        font-size: 0.76rem;
-      }
-
-      .hero-orb {
-        padding: 64px 8%;
-      }
-
-      .section {
-        grid-template-columns: 1fr;
-        padding: 28px 22px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding-inline: 16px;
-      }
-
-      header {
-        align-items: flex-start;
-      }
-
-      .nav-left, .nav-right {
-        flex-wrap: wrap;
-      }
-
-      .section {
-        padding: 24px 18px;
-        border-radius: 28px;
-      }
-    }
-  </style>
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "three": "https://aistudiocdn.com/three@^0.181.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
+  }
+}
+</script>
 </head>
-
-<body>
-  <div class="page">
-    <!-- NAVBAR -->
-    <header>
-      <nav class="nav-left">
-        <a href="#espacio">El espacio</a>
-        <a href="#tratamientos">Tratamientos</a>
-      </nav>
-
-      <div class="nav-center">
-        <div class="brand-main">ZM SANCTUARY</div>
-        <div class="brand-sub">CARACAS · HOLISTIC SPA · WELLNESS & BALANCE</div>
-      </div>
-
-      <div class="nav-right">
-        <a href="#membresia">Membresía</a>
-        <button class="nav-button" onclick="document.getElementById('reservar').scrollIntoView({behavior:'smooth'})">
-          Reservar
-        </button>
-      </div>
-    </header>
-
-    <!-- HERO PRINCIPAL -->
-    <main>
-      <section class="hero" id="espacio">
-        <div class="hero-orb">
-          <h1 class="hero-title-main">Armonía para</h1>
-          <h2 class="hero-title-soft">cuerpo y alma</h2>
-          <p class="hero-text">
-            Un espacio diseñado en tonos tierra y texturas orgánicas para devolverle la calma a tus sentidos.
-            La verdadera belleza nace de la paz interior.
-          </p>
-        </div>
-        <div class="scroll-indicator" onclick="document.getElementById('tratamientos').scrollIntoView({behavior:'smooth'})">
-          ↓
-        </div>
-      </section>
-
-      <!-- SECCIÓN ESENCIA / SUAVIDAD QUE TRANSFORMA -->
-      <section class="section" id="tratamientos">
-        <div class="section-image-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80"
-            alt="Masaje relajante con aceites"
-          />
-        </div>
-
-        <div class="section-text">
-          <div class="section-tag">Nuestra esencia</div>
-          <h2 class="section-title">
-            <span>Suavidad que</span>
-            <span>transforma.</span>
-          </h2>
-          <p>
-            En <strong>ZM Sanctuary</strong>, nos alejamos del ruido para abrazar la calidez.
-            Nuestro entorno combina maderas claras, lino natural y aromas de vainilla y sándalo
-            para crear una atmósfera de protección.
-          </p>
-          <p>
-            Cada tratamiento está pensado para liberar tensión, nutrir la piel y calmar la mente.
-            Queremos que tu visita se sienta como una pausa profunda: un respiro donde el tiempo
-            se vuelve más lento y tú vuelves a conectar contigo.
-          </p>
-          <div class="section-highlight">
-            <span>Ritual signature</span>
-            Masajes envolventes, aceites tibios y técnicas holísticas para equilibrar cuerpo, emoción y energía.
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="membresia">
-      Membresías, rituales y experiencias personalizadas próximamente.  
-      <span id="reservar"></span>
-    </footer>
-  </div>
-</body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
