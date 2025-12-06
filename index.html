@@ -131,3 +131,569 @@
       position: relative;
       max-width: 980px;
       margin: 0 auto;
+      text-align: center;
+      padding: 120px 32px 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 0, #ffffff 0, #f5e9e3 40%, #ead8cf 85%);
+      box-shadow:
+        0 40px 120px rgba(155, 117, 99, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 64px;
+      line-height: 1.12;
+      letter-spacing: 0.02em;
+      color: #6d4338;
+      margin-bottom: 32px;
+    }
+
+    .hero-title span {
+      font-style: italic;
+      color: #c7988b;
+    }
+
+    .hero-subtitle {
+      max-width: 740px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      color: #8c7267;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-scroll-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      border: 1px solid rgba(208, 166, 145, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #fef6f0 0, #f1ded2 100%);
+      box-shadow: 0 20px 60px rgba(156, 116, 95, 0.35);
+      color: #c69685;
+      font-size: 24px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -10px); }
+    }
+
+    /* SECCIÓN ESENCIA ----------------------------------------- */
+    section {
+      padding: 80px 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #c39a8e;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 44px;
+      color: #6b4338;
+      margin-bottom: 18px;
+    }
+
+    .section-text {
+      font-size: 17px;
+      color: #7b6458;
+      max-width: 540px;
+    }
+
+    .essence-image {
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 26px 80px rgba(137, 101, 83, 0.35);
+    }
+
+    /* MENÚ DE BIENESTAR --------------------------------------- */
+    .menu {
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      margin-bottom: 40px;
+      color: #6b4338;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: #fffaf7;
+      border-radius: 30px;
+      padding: 40px 32px 34px;
+      box-shadow: 0 20px 60px rgba(179, 140, 120, 0.22);
+      border: 1px solid rgba(238, 212, 196, 0.9);
+      text-align: left;
+    }
+
+    .card-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f6e0d4, #f7cbb7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #6b4338;
+    }
+
+    .card-text {
+      font-size: 15px;
+      color: #7d6559;
+      margin-bottom: 18px;
+    }
+
+    .card-meta {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #b38b7a;
+    }
+
+    /* GALERÍA -------------------------------------------------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 20px 70px rgba(151, 118, 101, 0.35);
+    }
+
+    /* MEMBRESÍA ------------------------------------------------ */
+    .membership {
+      padding-top: 40px;
+    }
+
+    .membership-card {
+      border-radius: 44px;
+      padding: 90px 80px;
+      background: linear-gradient(135deg, #e9cfaa, #e2c093);
+      color: #5a4033;
+      box-shadow: 0 30px 110px rgba(99, 73, 55, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .membership-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background-image: radial-gradient(circle at 0 0, rgba(255,255,255,0.7) 0, transparent 60%),
+        url("https://www.transparenttextures.com/patterns/hexellence.png");
+      mix-blend-mode: screen;
+    }
+
+    .membership-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .membership-icon {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .membership-title {
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+
+    .membership-text {
+      font-size: 17px;
+      margin-bottom: 34px;
+    }
+
+    .btn-light {
+      display: inline-block;
+      padding: 14px 40px;
+      border-radius: 999px;
+      background: #fff9f3;
+      color: #7b5140;
+      border: none;
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 14px 40px rgba(106, 71, 53, 0.45);
+    }
+
+    /* RESERVA -------------------------------------------------- */
+    .booking-wrapper {
+      border-radius: 40px;
+      background: linear-gradient(145deg, #fff7f1, #fdeee6);
+      box-shadow: 0 28px 90px rgba(165, 129, 110, 0.35);
+      padding: 64px 72px 70px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 64px;
+    }
+
+    .booking-title {
+      font-family: "Playfair Display", serif;
+      font-size: 40px;
+      margin-bottom: 18px;
+      color: #6b4338;
+    }
+
+    .booking-text {
+      font-size: 17px;
+      color: #7b6458;
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+
+    .booking-list {
+      display: grid;
+      gap: 14px;
+      font-size: 15px;
+      color: #7b6458;
+    }
+
+    .booking-list span {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .booking-list span::before {
+      content: "●";
+      font-size: 10px;
+      color: #d1a08b;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #c39a8e;
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #f0d8cc;
+      padding: 12px 14px;
+      font-size: 15px;
+      color: #6b5248;
+      background: #fffaf7;
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: #d1a08b;
+      box-shadow: 0 0 0 1px rgba(209, 160, 139, 0.45);
+    }
+
+    .btn-primary {
+      margin-top: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      border: none;
+      background: #6c4638;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 18px 60px rgba(95, 63, 48, 0.6);
+    }
+
+    .footer {
+      padding: 36px 0 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #b89a8a;
+    }
+
+    /* RESPONSIVE ----------------------------------------------- */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        border-radius: 46px;
+        padding: 96px 32px 110px;
+      }
+
+      .hero-title {
+        font-size: 48px;
+      }
+
+      .split,
+      .booking-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .membership-card {
+        padding: 70px 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-inner {
+        gap: 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero-inner {
+        padding: 80px 20px 96px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .booking-wrapper {
+        padding: 40px 24px 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- NAV BAR -->
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <nav class="nav-links">
+          <a href="#espacio">El espacio</a>
+          <a href="#tratamientos">Tratamientos</a>
+        </nav>
+
+        <div class="nav-center">ZM SANCTUARY</div>
+
+        <div class="nav-right">
+          <span>Membresía</span>
+          <a href="#reserva" class="btn-outline">Reservar</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <main>
+      <section class="hero" id="espacio">
+        <div class="hero-inner">
+          <h1 class="hero-title">
+            Armonía para <span>cuerpo y alma</span>
+          </h1>
+          <p class="hero-subtitle">
+            Un espacio diseñado en tonos tierra y texturas orgánicas para devolverle la calma a tus sentidos.
+            La verdadera belleza nace de la paz interior.
+          </p>
+
+          <div class="hero-scroll">
+            <div class="hero-scroll-circle">↓</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUESTRA ESENCIA -->
+      <section>
+        <div class="container split">
+          <div class="essence-image">
+            <img src="https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aceite de masaje sobre la piel">
+          </div>
+          <div>
+            <div class="eyebrow">Nuestra esencia</div>
+            <h2 class="section-title">Suavidad que transforma.</h2>
+            <p class="section-text">
+              En <strong>ZM Sanctuary</strong>, nos alejamos del ruido para abrazar la calidez. Nuestro entorno combina maderas claras,
+              lino natural y aromas de vainilla y sándalo para crear una atmósfera de protección y descanso profundo.
+              Aquí no solo cuidamos tu piel, cuidamos tu ritmo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MENÚ DE BIENESTAR -->
+      <section id="tratamientos" class="menu">
+        <div class="container">
+          <div class="eyebrow">Experiencias</div>
+          <h2>Menú de Bienestar</h2>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-icon">✿</div>
+              <h3 class="card-title">Masaje Sueco</h3>
+              <p class="card-text">
+                Movimientos suaves y largos con aceites tibios de almendra para una relajación total del sistema nervioso.
+              </p>
+              <div class="card-meta">60 MIN · REF. 80</div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">❀</div>
+              <h3 class="card-title">Ritual de Rosas</h3>
+              <p class="card-text">
+                Exfoliación corporal con pétalos de rosa y sales del Himalaya, seguida de una envoltura hidratante
+                para piel luminosa y suave.
+              </p>
+              <div class="card-meta">90 MIN · REF. 120</div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">☼</div>
+              <h3 class="card-title">Sauna Detox</h3>
+              <p class="card-text">
+                Sesión privada en nuestra sauna de madera de cedro para purificar la piel y oxigenar el cuerpo
+                antes de cualquier tratamiento.
+              </p>
+              <div class="card-meta">45 MIN · REF. 50</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section>
+        <div class="container">
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Piedras calientes">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3738340/pexels-photo-3738340.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Mascarilla facial">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3738342/pexels-photo-3738342.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Productos de spa">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3738343/pexels-photo-3738343.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Masaje relajante">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEMBRESÍA -->
+      <section class="membership">
+        <div class="container">
+          <div class="membership-card">
+            <div class="membership-inner">
+              <div class="membership-icon">✾</div>
+              <h2 class="membership-title">Membresía Harmony</h2>
+              <p class="membership-text">
+                Un programa pensado para tu equilibrio mensual. Disfruta de un masaje al mes, acceso a áreas húmedas y
+                beneficios exclusivos en productos de skincare orgánico.
+              </p>
+              <a href="#reserva" class="btn-light">Ver beneficios</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESERVA -->
+      <section id="reserva">
+        <div class="container">
+          <div class="booking-wrapper">
+            <div>
+              <h2 class="booking-title">Tu Momento</h2>
+              <p class="booking-text">
+                Reserva tu espacio de paz. Atendemos con cita previa para garantizar la privacidad y el silencio que mereces.
+              </p>
+              <div class="booking-list">
+                <span>+58 (212) 999–ROSE</span>
+                <span>@ZMSanctuary</span>
+                <span>Altamira Village, Caracas</span>
+              </div>
+            </div>
+
+            <div>
+              <form>
+                <div class="field">
+                  <label for="nombre">Nombre</label>
+                  <input id="nombre" type="text" placeholder="Escribe tu nombre" />
+                </div>
+
+                <div class="field">
+                  <label for="experiencia">Experiencia</label>
+                  <select id="experiencia">
+                    <option>Seleccione...</option>
+                    <option>Masaje Sueco</option>
+                    <option>Ritual de Rosas</option>
+                    <option>Sauna Detox</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                  Confirmar cita
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © ZM Sanctuary · Wellness & Balance
+    </footer>
+  </div>
+</body>
+</html>
